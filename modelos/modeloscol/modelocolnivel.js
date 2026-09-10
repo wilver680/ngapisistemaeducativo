@@ -1,10 +1,9 @@
-class modelocolcurso {
+class modelocolnivel {
 
-    constructor(
-        pkcursoid,
+    constructor(  
+        pknivelid,
         pkcolegioid,
-        codigocurso,
-        descripcioncurso,
+        descripcionnivel,
         activo,
         usuarioingresa,
         usuariomodifica,
@@ -12,10 +11,9 @@ class modelocolcurso {
         fechamodifica
 
     ) {
-        this.pkcursoid = pkcursoid;
+        this.pknivelid = pknivelid;
         this.pkcolegioid = pkcolegioid;
-        this.codigocurso = codigocurso;
-        this.descripcioncurso = descripcioncurso;
+        this.descripcionnivel = descripcionnivel;
         this.activo = activo;
         this.usuarioingresa = usuarioingresa;
         this.usuariomodifica = usuariomodifica;
@@ -23,18 +21,17 @@ class modelocolcurso {
         this.fechamodifica = fechamodifica;
     }
 
+    
     static desdeFila(fila) {
         if (!fila) {
             return null;
         }
 
-        const curso = new modelocolcurso(
-            fila.pkcursoid,
+        const nivel = new modelocolnivel(
+            fila.pknivelid,
             fila.pkcolegioid,
-            fila.codigocurso,
-            fila.descripcioncurso,
+            fila.descripcionnivel,
             fila.activo,
-            fila.nombrecolegio,
             fila.usuarioingresa,
             fila.usuariomodifica,
             fila.fechaingresa,
@@ -43,13 +40,14 @@ class modelocolcurso {
 
         // Este campo viene del JOIN con grcolegio.
         if (Object.hasOwn(fila, 'nombrecolegio')) {
-            curso.nombrecolegio =
+            nivel.nombrecolegio =
                 fila.nombrecolegio;
         }
 
-        return curso;
+        return nivel;
     }   
+
 
 }
 
-module.exports = modelocolcurso;
+module.exports = modelocolnivel;

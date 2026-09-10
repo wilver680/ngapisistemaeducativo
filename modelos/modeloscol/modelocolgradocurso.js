@@ -1,22 +1,22 @@
-class modelocolcursomaestro {
+class modelocolgradocurso {
 
-    constructor(
-        pkcursomaestroid,
-        pkcolegioid,
-        pkasignacionmaestroid,
+    constructor(  
         pkgradocursoid,
-        activo,
+        pkcolegioid,
+        pkgradoid,
+        pkcursoid,
+        activo,   
         usuarioingresa,
         usuariomodifica,
         fechaingresa,
         fechamodifica
 
     ) {
-        this.pkcursomaestroid = pkcursomaestroid;
+        this.pkgradocursoid = pkgradocursoid,
         this.pkcolegioid = pkcolegioid;
-        this.pkgradocursoid = pkgradocursoid;
+        this.pkgradoid = pkgradoid;
+        this.pkcursoid = pkcursoid;
         this.activo = activo;
-        this.pkasignacionmaestroid = pkasignacionmaestroid;
         this.usuarioingresa = usuarioingresa;
         this.usuariomodifica = usuariomodifica;
         this.fechaingresa = fechaingresa;
@@ -25,4 +25,4 @@ class modelocolcursomaestro {
 
 }
 
-module.exports = modelocolcursomaestro;
+module.exports = modelocolgradocurso;

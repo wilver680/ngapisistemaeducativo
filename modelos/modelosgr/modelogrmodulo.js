@@ -1,10 +1,12 @@
-class modelocolcursomaestro {
+const { act } = require("react");
+
+class modelogrmodulo {
 
     constructor(
-        pkcursomaestroid,
+        pkmoduloid,
         pkcolegioid,
-        pkasignacionmaestroid,
-        pkgradocursoid,
+        descripcionmodulo,
+        iconomodulo,
         activo,
         usuarioingresa,
         usuariomodifica,
@@ -12,11 +14,11 @@ class modelocolcursomaestro {
         fechamodifica
 
     ) {
-        this.pkcursomaestroid = pkcursomaestroid;
+        this.pkmoduloid = pkmoduloid;
         this.pkcolegioid = pkcolegioid;
-        this.pkgradocursoid = pkgradocursoid;
+        this.descripcionmodulo = descripcionmodulo;
+        this.iconomodulo = iconomodulo;
         this.activo = activo;
-        this.pkasignacionmaestroid = pkasignacionmaestroid;
         this.usuarioingresa = usuarioingresa;
         this.usuariomodifica = usuariomodifica;
         this.fechaingresa = fechaingresa;
@@ -25,4 +27,4 @@ class modelocolcursomaestro {
 
 }
 
-module.exports = modelocolcursomaestro;
+module.exports = modelogrmodulo;

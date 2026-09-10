@@ -1,22 +1,20 @@
-class modelocolcursomaestro {
+class modeloconsultasmedicas {
 
     constructor(
-        pkcursomaestroid,
+        pkconsultamedicaid,
         pkcolegioid,
-        pkasignacionmaestroid,
-        pkgradocursoid,
-        activo,
+        descripcionconsultamedica,
+        fechaconsulta,
         usuarioingresa,
         usuariomodifica,
         fechaingresa,
         fechamodifica
 
     ) {
-        this.pkcursomaestroid = pkcursomaestroid;
+        this.pkconsultamedicaid = pkconsultamedicaid;
         this.pkcolegioid = pkcolegioid;
-        this.pkgradocursoid = pkgradocursoid;
-        this.activo = activo;
-        this.pkasignacionmaestroid = pkasignacionmaestroid;
+        this.descripcionconsultamedica = descripcionconsultamedica;
+        this.fechaconsulta = fechaconsulta;
         this.usuarioingresa = usuarioingresa;
         this.usuariomodifica = usuariomodifica;
         this.fechaingresa = fechaingresa;
@@ -25,4 +23,4 @@ class modelocolcursomaestro {
 
 }
 
-module.exports = modelocolcursomaestro;
+module.exports = modeloconsultasmedicas;

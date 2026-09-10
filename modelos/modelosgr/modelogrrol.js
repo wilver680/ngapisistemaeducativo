@@ -1,10 +1,11 @@
-class modelocolcursomaestro {
+const { act } = require("react");
+
+class modelogrrol {
 
     constructor(
-        pkcursomaestroid,
+        pkrolid,
         pkcolegioid,
-        pkasignacionmaestroid,
-        pkgradocursoid,
+        descripcionrol,
         activo,
         usuarioingresa,
         usuariomodifica,
@@ -12,11 +13,10 @@ class modelocolcursomaestro {
         fechamodifica
 
     ) {
-        this.pkcursomaestroid = pkcursomaestroid;
+        this.pkrolid = pkrolid;
         this.pkcolegioid = pkcolegioid;
-        this.pkgradocursoid = pkgradocursoid;
+        this.descripcionrol = descripcionrol;
         this.activo = activo;
-        this.pkasignacionmaestroid = pkasignacionmaestroid;
         this.usuarioingresa = usuarioingresa;
         this.usuariomodifica = usuariomodifica;
         this.fechaingresa = fechaingresa;
@@ -25,4 +25,4 @@ class modelocolcursomaestro {
 
 }
 
-module.exports = modelocolcursomaestro;
+module.exports = modelogrrol;
