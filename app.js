@@ -1,5 +1,6 @@
 const express = require('express');
 const config = require('./config');
+const respuesta = require('./respuestas');
 
 const app = express();
 
@@ -15,5 +16,12 @@ app.get('/', (req, res) => {
         mensaje: 'API funcionando correctamente'
     });
 });
+
+// Conecta las URLs definidas en routes.js.
+app.use('/api', require('./routes'));
+
+// Manejo centralizado de errores.
+app.use(respuesta.rutaNoEncontrada);
+app.use(respuesta.manejarError);
 
 module.exports = app;
